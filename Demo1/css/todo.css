@@ -19,6 +19,15 @@
     font-size: 18px;
 }
 
+.mycontainer{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 /*顶部菜单图标*/
 
 .header-img {
@@ -30,15 +39,46 @@
 
 /*面板*/
 
-.mypanel {
-    padding-right: 0px;
-    padding-left: 0px;
-}
-
-.mypanel-body{
+.mypanel{
     border-left-width: 8px;
     border-left-color: orange;
     box-shadow: 1px 3px 1px #888888;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    
+    border-left-width: 10px;
+    border-left-color: orange;
+    padding-top:10px;
+}
+
+.mypanel-body{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.text-label{
+    width: 100%;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px
+    margin-bottom:10px;
+    word-break: break-word;
+}
+
+.arrows-img{
+    top: 50%;
+    right: 1px;
+    float: inherit;
+    position: absolute;
+    color: #bebec1;
+    font-size:1.4em;
 }
 
 /*状态按键*/
@@ -107,4 +147,38 @@ html,body{
 
 .text-center {
     text-align: center
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width:768px) {
+
+    .mypanel-body{
+        
+    }
+
+}
+
+@media only screen and (min-width:1024px){
+    
+    .mypanel{
+        width: 49%;
+        margin-left: 5px;
+    }
+    
+    .text-label{
+        
+    }
+    
 }
