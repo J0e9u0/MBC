@@ -31,9 +31,9 @@
 /*顶部菜单图标*/
 
 .header-img {
-    width: 12%;
+    width: 13%;
     float: right;
-    font-size: 20px;
+    font-size: 25px;
     padding-top: 10px;
 }
 
@@ -52,7 +52,6 @@
     
     border-left-width: 10px;
     border-left-color: orange;
-    padding-top:10px;
 }
 
 .mypanel-body{
@@ -74,11 +73,11 @@
 
 .arrows-img{
     top: 50%;
-    right: 1px;
+    left: 310px;
     float: inherit;
     position: absolute;
     color: #bebec1;
-    font-size:1.4em;
+    font-size:1.2em;
 }
 
 /*状态按键*/
@@ -86,6 +85,21 @@
 .btn-state {
     float: right;
     border-radius: 25px;
+    /*btn-xs*/
+    padding-top: 1px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    font-size: 12px;
+    line-height: 1.7;
+    /*btn-primary*/
+    color: #fff;
+    background-color: #337ab7;
+    /*btn*/
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    border: 3px solid 
 }
 
 html,body{

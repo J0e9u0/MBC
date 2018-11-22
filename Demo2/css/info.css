@@ -1,0 +1,87 @@
+/*顶部栏*/
+
+.info-header {
+    position: flex;
+    /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+    z-index: 99;
+    /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
+    width: 100%;
+    background-color: cornflowerblue;
+    font-size: 30px;
+    color: aliceblue;
+    height: 45px;
+}
+
+/*标题*/
+
+.info-title {
+    margin-right: 40px;
+    font-size: 16px;
+}
+
+/*返回图标*/
+
+.backarrow-img {
+    width: 13%;
+    float: left;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+
+.info-container{
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    padding: 0px;
+}
+
+
+/*面板*/
+
+.info-panel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: flex;
+    justify-content:center;
+    margin-bottom:10px;
+    padding-top:10px;
+}
+
+.info-panel-body{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 5px;
+}
+
+.info-text-label{
+    width: 100%;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 25px;
+    word-break: break-word;
+}
+
+.more-arrows-img{
+    width: 13%;
+    float: right;
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+
+
+@media only screen and (max-width:768px) {
+
+    
+
+}
+
+@media only screen and (min-width:1024px){
+    
+    
+    
+}
