@@ -1,0 +1,184 @@
+/*顶部栏*/
+
+.header {
+    position: fixed;
+    /* 绝对定位，fixed是相对于浏览器窗口定位。 */
+    z-index: 99;
+    /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
+    width: 100%;
+    background-color: cornflowerblue;
+    font-size: 30px;
+    color: aliceblue;
+    height: 45px;
+}
+
+/*todo标题*/
+
+.text-title {
+    margin-left: 28px;
+    font-size: 18px;
+}
+
+.mycontainer{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*顶部菜单图标*/
+
+.header-img {
+    width: 12%;
+    float: right;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+/*面板*/
+
+.mypanel{
+    border-left-width: 8px;
+    border-left-color: orange;
+    box-shadow: 1px 3px 1px #888888;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    
+    border-left-width: 10px;
+    border-left-color: orange;
+    padding-top:10px;
+}
+
+.mypanel-body{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.text-label{
+    width: 100%;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px
+    margin-bottom:10px;
+    word-break: break-word;
+}
+
+.arrows-img{
+    top: 50%;
+    right: 1px;
+    float: inherit;
+    position: absolute;
+    color: #bebec1;
+    font-size:1.4em;
+}
+
+/*状态按键*/
+
+.btn-state {
+    float: right;
+    border-radius: 25px;
+}
+
+html,body{
+    min-height: 100%;
+}
+
+/*数据标签*/
+
+.text-key {
+    font-size: 12px;
+    color: gray;
+}
+
+/*数据值*/
+
+.text-number-value {
+    word-break: break-word;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+/*字符串数据值*/
+
+.text-value {
+    font-size: 13px;
+    font-weight: 700;
+    padding-right: 1px;
+}
+
+/*底部悬浮菜单*/
+
+.menu {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    color: #474747;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    background-color: #fff;
+    justify-content: center;
+    /*主轴上的对齐方式*/
+}
+
+.subMenu {
+    width: 30%;
+    float: left;
+}
+
+.menu-name {
+    width: 100%;
+    line-height: 15px;
+}
+
+.menu-img {
+    font-size: 20px;
+}
+
+.text-center {
+    text-align: center
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width:768px) {
+
+    .mypanel-body{
+        
+    }
+
+}
+
+@media only screen and (min-width:1024px){
+    
+    .mypanel{
+        width: 49%;
+        margin-left: 5px;
+    }
+    
+    .text-label{
+        
+    }
+    
+}

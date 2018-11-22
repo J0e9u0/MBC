@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Demo1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='https://knockoutjs.com/downloads/knockout-3.4.2.js'></script>
+    <link rel="stylesheet" type="text/css" href="css/todo.css">
+</head>
+
+<body style="background-color: gainsboro; padding-bottom: 60px">
+    <!-- 顶部栏 -->
+    <div class="header text-center">
+        <span class="text-title">Todo</span>
+        <span class="glyphicon glyphicon-th-list header-img" aria-hidden="true"></span>
+    </div>
+
+    <!-- 主要容器 -->
+    <div class="mycontainer" data-bind="foreach: panelArray">
+
+        <!-- 面板 -->
+        <div class="panel panel-default mypanel">
+            <div class="panel-body mypanel-body">
+                <div class="text-label">
+                    <strong data-bind="text: id"></strong>
+                    <button type="button" class="btn btn-primary btn-xs btn-state" data-bind="text: state"></button>
+                </div>
+                <div class="text-label">
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;<span class="text-key">2018-11-18</span> &nbsp;
+                </div>
+                <div class="text-label">
+                    <label class="col-6 text-key">Total Amount</label>
+                    <span class="col-6 text-key">Unbudgete</span>
+                </div>
+                <div class="text-label">
+                    <label class="col-6 text-number-value" data-bind="text: totalAmount"></label>
+                    <span class="col-6 text-number-value" data-bind="text: unbudgete"></span>
+                </div>
+                <div class="text-label">
+                    <label class="col-6 text-key">Applicant</label>
+                    <span class="col-6 text-key">Revenve Mode</span>
+                </div>
+                <div class="text-label">
+                    <label class="col-6 text-value" data-bind="text: applicant"></label>
+                    <span class="col-6 text-value" data-bind="text: revenveMode"></span>
+                </div>
+                <div class="col-2 glyphicon glyphicon-menu-right arrows-img" aria-hidden="true"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- 底部悬浮菜单 -->
+    <div id="menu" class="menu">
+        <div id="todo-btn" class="subMenu text-center">
+            <span class="glyphicon glyphicon-th-large menu-img" aria-hidden="true"></span>
+            <div class="menu-name">Todo</div>
+        </div>
+        <div id="approval-btn" class="subMenu text-center">
+            <span class="glyphicon glyphicon-list-alt menu-img" aria-hidden="true"></span>
+            <div class="menu-name ">Approval</div>
+        </div>
+        <div id="me-btn" class="subMenu text-center">
+            <span class="glyphicon glyphicon-user menu-img" aria-hidden="true"></span>
+            <div class="menu-name">Me</div>
+        </div>
+    </div>
+
+</body>
+<script>
+    var panelArray = [{
+        id: 'CER2018-0513',
+        state: 'Pending for FINCON',
+        totalAmount: '$2,500,000',
+        unbudgete: '—',
+        applicant: 'CHRISTINE S YAO',
+        revenveMode: 'Acquisiton'
+    }, {
+        id: 'CER2018-0513',
+        state: 'Pending for FINCON',
+        totalAmount: '$2,500,000',
+        unbudgete: '—',
+        applicant: 'CHRISTINE S YAO',
+        revenveMode: 'Acquisiton'
+    }];
+
+    ko.applyBindings(panelArray);
+</script>
+</html>
