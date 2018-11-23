@@ -103,8 +103,8 @@
                         <div class="info-title-label info-panel-title">
                             <label class="col-12 text-value">Basic Info</label>
                         </div>
-                        <div class="info-panel-body">
-                            <div class="info-text-label top-line">
+                        <div class="info-panel-body top-line">
+                            <div class="info-text-label">
                                 <div class="col-11 text-key">Applicant</div>
                                 <label class="col-11 text-value" data-bind="text: infoArray[0].basicInfo.applicant"></label>
                             </div>
@@ -121,7 +121,7 @@
                                 <label class="col-11 text-value" data-bind="text: infoArray[0].basicInfo.description"></label>
                             </div>
                         </div>
-                        <div class="info-text-label line"></div>
+                        <div class="info-panel-body line"></div>
                         <div class="info-bottem-label">
                             <label class="more-text">More</label>
                             <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true"></a>
@@ -134,8 +134,8 @@
                         <div class="info-title-label info-panel-title">
                             <label class="col-12 text-value">Have Budgeted</label>
                         </div>
-                        <div class="info-panel-body">
-                            <div class="info-value-label top-line">
+                        <div class="info-panel-body top-line">
+                            <div class="info-value-label">
                                 <div class="col-6 text-key">Total Lease Commitment</div>
                                 <div class="col-6 info-text-value">
                                     <label style="float:right" data-bind="text: infoArray[0].haveBudgeted.totalLeaseCommitment"></label>
@@ -167,7 +167,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="info-text-label line"></div>
+                        <div class="info-panel-body line"></div>
                         <div class="info-bottem-label">
                             <label class="more-text">More</label>
                             <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true"></a>
@@ -180,24 +180,22 @@
                         <div class="info-title-label info-panel-title">
                             <label class="col-12 text-value">Supporting Document</label>
                         </div>
-                        <div class="info-panel-body" data-bind="foreach: infoArray[0].supportingDocument">
-                            <div class="info-file-label top-line" style="padding-top: 8px;">
+                        <div class="info-panel-body top-line" data-bind="foreach: infoArray[0].supportingDocument">
+                            <div class="info-file-label line" style="padding-top: 8px;">
                                 <div class="col-10" style="display: flex;flex-direction: row;">
-                                    <img src="img/doc.png" style="width: 50px;height: 50px;">
+                                    <img src="img/doc.png" class="doc-img">
                                     <div style="padding-left: 20px;">
                                         <label class="text-value" style="width: 100px" data-bind="text: fileName"></label><br>
                                         <span class="text-key" style="width: 100px" data-bind="text: fileDescription"></span>
                                     </div>
                                 </div>
-                                <div class="col-2">
-                                    <div class="info-text-value" style="padding-top: 10px;">
-                                        <img src="img/download.png" class="download-img">
-                                    </div>
+                                <div class="info-text-value col-2" style="padding-top: 10px;">
+                                    <img src="img/download.png" class="download-img">
                                 </div>
                             </div>
                             <!--add-->
                         </div>
-                        <div class="info-text-label line"></div>
+                        <div class="info-panel-body line" style="position: relative;top: -1px;"></div>
                         <div class="info-bottem-label">
                             <label class="more-text">More</label>
                             <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true"></a>
