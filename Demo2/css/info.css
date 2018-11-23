@@ -70,9 +70,9 @@
 .info-title-label{
     width: 100%;
     margin: 0px;
-    margin-left: 0px;
+    margin-left: 5px;
     margin-right: 0px;
-    padding-left: 25px;
+    padding-left: 20px;
     word-break: break-word;
 }
 
@@ -127,6 +127,7 @@
     justify-content:space-between;
     padding-left: 25px;
     padding-right: 5px;
+    padding-bottom: 5px;
 }
 
 .info-text-value {

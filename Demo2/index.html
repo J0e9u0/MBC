@@ -20,14 +20,15 @@
 
 <body>
     <!-- 页面一 -->
-    <div data-role="page" id="pageone" >
+    <div data-role="page" id="pageone">
         <!-- 顶部栏 -->
         <div class="header text-center">
             <span class="text-title">Todo</span>
             <span class="glyphicon glyphicon-th-list header-img" aria-hidden="true"></span>
         </div>
         <!-- 主要容器 -->
-        <div class="mycontainer" data-bind="foreach: panelArray" data-role="content"  style=""><!-- background-color: gainsboro; padding-bottom: 60px-->
+        <div class="mycontainer" data-bind="foreach: panelArray" data-role="content" style="padding-bottom: 60px">
+            <!-- background-color: gainsboro; -->
             <!-- 面板 -->
             <div class="panel panel-default mypanel">
                 <div class="panel-body mypanel-body" data-bind="click: $parent.gopagetwo">
@@ -45,15 +46,24 @@
                     </div>
                     <div class="text-label">
                         <label class="col-6 text-number-value" data-bind="text: totalAmount"></label>
-                        <span class="col-6 text-number-value" data-bind="text: unbudgete"></span>
+                        <!-- ko if: unbudgete -->
+                        <span class="col-6 text-number-value" data-bind="text: unbudgete" style="color: cornflowerblue"></span>
+                        <!-- /ko -->
+                        <!-- ko ifnot: unbudgete -->
+                        <span class="col-6 text-number-value">—</span>
+                        <!-- /ko -->
                     </div>
                     <div class="text-label">
                         <label class="col-6 text-key">Applicant</label>
+                        <!-- ko if: revenveMode -->
                         <span class="col-6 text-key">Revenve Mode</span>
+                        <!-- /ko -->
                     </div>
                     <div class="text-label">
                         <label class="col-6 text-value" data-bind="text: applicant"></label>
+                        <!-- ko if: revenveMode -->
                         <span class="col-6 text-value" data-bind="text: revenveMode"></span>
+                        <!-- /ko -->
                     </div>
                 </div>
                 <a class="glyphicon glyphicon-menu-right arrows-img" aria-hidden="true" href="#pagetwo" data-transition="slide"></a>
@@ -85,15 +95,16 @@
                 <a href="#pageone" data-them='m'><span class="glyphicon glyphicon-menu-left backarrow-img" aria-hidden="true"></span></a>
             </div>
             <!-- 主要容器 -->
-            <div class="info-container" style="padding-top: 50px"><!-- background-color: gainsboro; -->
+            <div class="info-container" style="padding-top: 50px">
+                <!-- background-color: gainsboro; -->
                 <!-- Basic Info面板 -->
                 <div class="panel panel-default info-panel">
                     <div class="panel-body" style="padding-top: 5px; padding-bottom: 5px">
-                        <div class="info-title-label line info-panel-title">
+                        <div class="info-title-label info-panel-title">
                             <label class="col-12 text-value">Basic Info</label>
                         </div>
                         <div class="info-panel-body">
-                            <div class="info-text-label">
+                            <div class="info-text-label top-line">
                                 <div class="col-11 text-key">Applicant</div>
                                 <label class="col-11 text-value" data-bind="text: infoArray[0].basicInfo.applicant"></label>
                             </div>
@@ -120,11 +131,11 @@
                 <!-- Have Budgeted面板 -->
                 <div class="panel panel-default info-panel">
                     <div class="panel-body" style="padding-top: 5px; padding-bottom: 5px">
-                        <div class="info-title-label line info-panel-title">
+                        <div class="info-title-label info-panel-title">
                             <label class="col-12 text-value">Have Budgeted</label>
                         </div>
                         <div class="info-panel-body">
-                            <div class="info-value-label">
+                            <div class="info-value-label top-line">
                                 <div class="col-6 text-key">Total Lease Commitment</div>
                                 <div class="col-6 info-text-value">
                                     <label style="float:right" data-bind="text: infoArray[0].haveBudgeted.totalLeaseCommitment"></label>
@@ -138,9 +149,16 @@
                             </div>
                             <div class="info-value-label">
                                 <div class="col-6 text-key">This Application</div>
+                                <!-- ko if: infoArray[0].haveBudgeted.application -->
                                 <div class="col-6 info-text-value">
-                                    <label style="float:right" data-bind="text: infoArray[0].haveBudgeted.Application"></label>
+                                    <label style="float:right; color: cornflowerblue" data-bind="text: infoArray[0].haveBudgeted.application"></label>
                                 </div>
+                                <!-- /ko -->
+                                <!-- ko ifnot: infoArray[0].haveBudgeted.application -->
+                                <div class="col-6 info-text-value">
+                                    <label style="float:right;">--</label>
+                                </div>
+                                <!-- /ko -->
                             </div>
                             <div class="info-value-label">
                                 <div class="col-6 text-key">Budget Variance</div>
@@ -157,7 +175,7 @@
                     </div>
                 </div>
                 <!-- Supporting Document面板 -->
-                <div class="panel panel-default info-panel" data-role="content">
+                <div class="panel panel-default info-panel">
                     <div class="panel-body" style="padding-top: 5px; padding-bottom: 5px">
                         <div class="info-title-label info-panel-title">
                             <label class="col-12 text-value">Supporting Document</label>
@@ -167,7 +185,7 @@
                                 <div class="col-10" style="display: flex;flex-direction: row;">
                                     <img src="img/doc.png" style="width: 50px;height: 50px;">
                                     <div style="padding-left: 20px;">
-                                       <label class="text-value" style="width: 100px" data-bind="text: fileName"></label><br>
+                                        <label class="text-value" style="width: 100px" data-bind="text: fileName"></label><br>
                                         <span class="text-key" style="width: 100px" data-bind="text: fileDescription"></span>
                                     </div>
                                 </div>
@@ -192,7 +210,7 @@
 </body>
 <script>
     /*todo页数据绑定*/
-    
+
     var test = {
         id: 'CER2018-0513',
         state: 'Pending for FINCON',
@@ -205,16 +223,30 @@
     var panelArray = [{
         id: 'CER2018-0513',
         state: 'Pending for FINCON',
+        totalAmount: '$2,500,001',
+        unbudgete: null,
+        applicant: 'HELEN TONG',
+        revenveMode: 'Acquisiton'
+    }, {
+        id: 'CER2018-0063',
+        state: 'Initial Checking',
+        totalAmount: '$250,001',
+        unbudgete: null,
+        applicant: 'HELEN TONG',
+        revenveMode: null
+    }, {
+        id: 'CER2018-0475',
+        state: 'Initial Checking',
         totalAmount: '$2,500,000',
-        unbudgete: '—',
+        unbudgete: null,
         applicant: 'CHRISTINE S YAO',
         revenveMode: 'Acquisiton'
     }, {
-        id: 'CER2018-0514',
-        state: 'Pending for FINCON',
-        totalAmount: '$2,500,000',
-        unbudgete: '—',
-        applicant: 'CHRISTINE S YAO',
+        id: 'CER2018-0458',
+        state: 'Initial Checking',
+        totalAmount: '$50,000,001',
+        unbudgete: '$50,000,002',
+        applicant: 'HELEN TONG',
         revenveMode: 'Acquisiton'
     }];
 
@@ -226,54 +258,51 @@
         self.panelArray = ko.observableArray(panelArray);
 
         self.removePanel = function() {
-            self.panelArray.remove(this);
+            //            self.panelArray.remove(this);
         }
         self.gopagetwo = function() {
-            //            self.panelArray.remove(this);
+            //          self.panelArray.remove(this);
             window.location.href = '#pagetwo';
         }
     }
 
     //    ko.applyBindings(panelArrayModel);
-    ko.applyBindings(new AppViewModel(),document.getElementById('pageone'));
-    
+    ko.applyBindings(new AppViewModel(), document.getElementById('pageone'));
+
     /*info详情页数据绑定*/
-    
-    fileTest={
-        fileId:'3',
-        fileName:'A4_CER1103.DOC',
-        fileDescription:'A4 OLD1103'
+
+    fileTest = {
+        fileId: '3',
+        fileName: 'A4_CER1103.DOC',
+        fileDescription: 'A4 OLD1103'
     };
-    
+
     var infoArray = [{
-        id:'CER2018-0513',
-        basicInfo : {
+        id: 'CER2018-0513',
+        basicInfo: {
             applicant: 'GLADYS CHIU',
             assetType: 'OLL warehouses, depots, trucks & others',
             companyName: 'Gold Talent Business Consulting (Shanghai)...',
             description: 'Subject: ${FORM_TYPE} Form Number...'
         },
         haveBudgeted: {
-            totalLeaseCommitment:'--',
-            previousApplications:'--',
-            Application:'$123,456,789',
-            budgetVariance:'--',
+            totalLeaseCommitment: '--',
+            previousApplications: '--',
+            application: '$123,456,789',
+            budgetVariance: '--',
         },
         supportingDocument: [{
-            fileId:'1',
-            fileName:'A4_CER1101.DOC',
-            fileDescription:'A4 CER1101'
-        },{
-            fileId:'2',
-            fileName:'A4_CER1101.DOC',
-            fileDescription:'A4 OLD1101'
+            fileId: '1',
+            fileName: 'A4_CER1101.DOC',
+            fileDescription: 'A4 CER1101'
+        }, {
+            fileId: '2',
+            fileName: 'A4_CER1101.DOC',
+            fileDescription: 'A4 OLD1101'
         }]
     }];
-    
+
     var infoArrayModel = ko.observableArray(infoArray);
-    ko.applyBindings(infoArrayModel,document.getElementById('pagetwo'));
-    
-    
-    
+    ko.applyBindings(infoArrayModel, document.getElementById('pagetwo'));
 </script>
 </html>
