@@ -1,7 +1,7 @@
 /*顶部栏*/
 
 .info-header {
-    position: flex;
+    position: fixed;
     /* 绝对定位，fixed是相对于浏览器窗口定位。 */
     z-index: 99;
     /* 层叠顺序，数值越大就越高。页面滚动的时候就不会被其他内容所遮挡。 */
@@ -49,6 +49,33 @@
     padding-top:10px;
 }
 
+.line{
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: whitesmoke;
+}
+
+.top-line{
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: whitesmoke;
+}
+
+.info-panel-title{
+    border-left-style: solid;
+    border-left-width: 6px;
+    border-left-color:cornflowerblue;
+}
+
+.info-title-label{
+    width: 100%;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 25px;
+    word-break: break-word;
+}
+
 .info-panel-body{
     display: flex;
     flex-direction: column;
@@ -66,10 +93,57 @@
 }
 
 .more-arrows-img{
-    width: 13%;
+    width: 3%;
     float: right;
     font-size: 15px;
     padding-top: 5px;
+}
+
+.download-img{
+    width: 20px;
+    height: 20px;
+    float:right;
+}
+
+.more-text{
+    padding-top: 3px;
+    color: cornflowerblue;
+    font-size: 14px;
+    font-weight: 100;
+    width: 40px;
+}
+
+.info-value-label{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding-left: 25px;
+    padding-right: 5px;
+}
+
+.info-file-label{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding-left: 25px;
+    padding-right: 5px;
+}
+
+.info-text-value {
+    font-size: 13px;
+    font-weight: 700;
+/*    width: 10px;*/
+}
+
+.info-bottem-label{
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 25px;
+    word-break: break-word;
+    justify-content:flex-end;
 }
 
 

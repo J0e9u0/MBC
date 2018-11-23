@@ -18,16 +18,16 @@
     <link rel="stylesheet" type="text/css" href="css/info.css">
 </head>
 
-<body style="background-color: gainsboro; padding-bottom: 60px">
+<body>
     <!-- 页面一 -->
-    <div data-role="page" id="pageone">
+    <div data-role="page" id="pageone" >
         <!-- 顶部栏 -->
         <div class="header text-center">
             <span class="text-title">Todo</span>
             <span class="glyphicon glyphicon-th-list header-img" aria-hidden="true"></span>
         </div>
         <!-- 主要容器 -->
-        <div class="mycontainer" data-bind="foreach: panelArray" data-role="content">
+        <div class="mycontainer" data-bind="foreach: panelArray" data-role="content"  style=""><!-- background-color: gainsboro; padding-bottom: 60px-->
             <!-- 面板 -->
             <div class="panel panel-default mypanel">
                 <div class="panel-body mypanel-body" data-bind="click: $parent.gopagetwo">
@@ -56,7 +56,7 @@
                         <span class="col-6 text-value" data-bind="text: revenveMode"></span>
                     </div>
                 </div>
-                <a class="col-2 glyphicon glyphicon-menu-right arrows-img" aria-hidden="true" href="#pagetwo" data-transition="slide"></a>
+                <a class="glyphicon glyphicon-menu-right arrows-img" aria-hidden="true" href="#pagetwo" data-transition="slide"></a>
             </div>
         </div>
         <!-- 底部悬浮菜单 -->
@@ -85,30 +85,103 @@
                 <a href="#pageone" data-them='m'><span class="glyphicon glyphicon-menu-left backarrow-img" aria-hidden="true"></span></a>
             </div>
             <!-- 主要容器 -->
-            <div class="info-container">
-                <!-- 面板 -->
+            <div class="info-container" style="padding-top: 50px"><!-- background-color: gainsboro; -->
+                <!-- Basic Info面板 -->
                 <div class="panel panel-default info-panel">
-                    <div class="panel-body info-panel-body">
-                        <div class="info-text-label">
-                            <label class="col-11 text-value">Basic Info</label>
+                    <div class="panel-body" style="padding-top: 5px; padding-bottom: 5px">
+                        <div class="info-title-label line info-panel-title">
+                            <label class="col-12 text-value">Basic Info</label>
                         </div>
-                        <div class="info-text-label">
-                            <div class="col-11 text-key">Applicant</div>
-                            <label class="col-11 text-value">GLADYS CHIU</label>
+                        <div class="info-panel-body">
+                            <div class="info-text-label">
+                                <div class="col-11 text-key">Applicant</div>
+                                <label class="col-11 text-value" data-bind="text: infoArray[0].basicInfo.applicant"></label>
+                            </div>
+                            <div class="info-text-label">
+                                <div class="col-11 text-key">Asset Type</div>
+                                <label class="col-11 text-value" data-bind="text: infoArray[0].basicInfo.assetType"></label>
+                            </div>
+                            <div class="info-text-label">
+                                <div class="col-11 text-key">Company Name</div>
+                                <label class="col-11 text-value" data-bind="text: infoArray[0].basicInfo.companyName"></label>
+                            </div>
+                            <div class="info-text-label">
+                                <div class="col-11 text-key">Description</div>
+                                <label class="col-11 text-value" data-bind="text: infoArray[0].basicInfo.description"></label>
+                            </div>
                         </div>
-                        <div class="info-text-label">
-                            <div class="col-11 text-key">Asset Type</div>
-                            <label class="col-11 text-value">OLL warehouses, depots, trucks & others</label>
+                        <div class="info-text-label line"></div>
+                        <div class="info-bottem-label">
+                            <label class="more-text">More</label>
+                            <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true"></a>
                         </div>
-                        <div class="info-text-label">
-                            <div class="col-11 text-key">Company Name</div>
-                            <label class="col-11 text-value">Gold Talent Business Consulting (Shanghai)...</label>
+                    </div>
+                </div>
+                <!-- Have Budgeted面板 -->
+                <div class="panel panel-default info-panel">
+                    <div class="panel-body" style="padding-top: 5px; padding-bottom: 5px">
+                        <div class="info-title-label line info-panel-title">
+                            <label class="col-12 text-value">Have Budgeted</label>
                         </div>
-                        <div class="info-text-label">
-                            <div class="col-11 text-key">Description</div>
-                            <label class="col-11 text-value">Subject: ${FORM_TYPE} Form Number...</label>
+                        <div class="info-panel-body">
+                            <div class="info-value-label">
+                                <div class="col-6 text-key">Total Lease Commitment</div>
+                                <div class="col-6 info-text-value">
+                                    <label style="float:right" data-bind="text: infoArray[0].haveBudgeted.totalLeaseCommitment"></label>
+                                </div>
+                            </div>
+                            <div class="info-value-label">
+                                <div class="col-6 text-key">Previous application(s)</div>
+                                <div class="col-6 info-text-value">
+                                    <label style="float:right" data-bind="text: infoArray[0].haveBudgeted.previousApplications"></label>
+                                </div>
+                            </div>
+                            <div class="info-value-label">
+                                <div class="col-6 text-key">This Application</div>
+                                <div class="col-6 info-text-value">
+                                    <label style="float:right" data-bind="text: infoArray[0].haveBudgeted.Application"></label>
+                                </div>
+                            </div>
+                            <div class="info-value-label">
+                                <div class="col-6 text-key">Budget Variance</div>
+                                <div class="col-6 info-text-value">
+                                    <label style="float:right" data-bind="text: infoArray[0].haveBudgeted.budgetVariance"></label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="info-text-label">
+                        <div class="info-text-label line"></div>
+                        <div class="info-bottem-label">
+                            <label class="more-text">More</label>
+                            <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Supporting Document面板 -->
+                <div class="panel panel-default info-panel" data-role="content">
+                    <div class="panel-body" style="padding-top: 5px; padding-bottom: 5px">
+                        <div class="info-title-label info-panel-title">
+                            <label class="col-12 text-value">Supporting Document</label>
+                        </div>
+                        <div class="info-panel-body" data-bind="foreach: infoArray[0].supportingDocument">
+                            <div class="info-file-label top-line" style="padding-top: 8px;">
+                                <div class="col-10" style="display: flex;flex-direction: row;">
+                                    <img src="img/doc.png" style="width: 50px;height: 50px;">
+                                    <div style="padding-left: 20px;">
+                                       <label class="text-value" style="width: 100px" data-bind="text: fileName"></label><br>
+                                        <span class="text-key" style="width: 100px" data-bind="text: fileDescription"></span>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="info-text-value" style="padding-top: 10px;">
+                                        <img src="img/download.png" class="download-img">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--add-->
+                        </div>
+                        <div class="info-text-label line"></div>
+                        <div class="info-bottem-label">
+                            <label class="more-text">More</label>
                             <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true"></a>
                         </div>
                     </div>
@@ -118,6 +191,8 @@
     </div>
 </body>
 <script>
+    /*todo页数据绑定*/
+    
     var test = {
         id: 'CER2018-0513',
         state: 'Pending for FINCON',
@@ -160,6 +235,45 @@
     }
 
     //    ko.applyBindings(panelArrayModel);
-    ko.applyBindings(new AppViewModel());
+    ko.applyBindings(new AppViewModel(),document.getElementById('pageone'));
+    
+    /*info详情页数据绑定*/
+    
+    fileTest={
+        fileId:'3',
+        fileName:'A4_CER1103.DOC',
+        fileDescription:'A4 OLD1103'
+    };
+    
+    var infoArray = [{
+        id:'CER2018-0513',
+        basicInfo : {
+            applicant: 'GLADYS CHIU',
+            assetType: 'OLL warehouses, depots, trucks & others',
+            companyName: 'Gold Talent Business Consulting (Shanghai)...',
+            description: 'Subject: ${FORM_TYPE} Form Number...'
+        },
+        haveBudgeted: {
+            totalLeaseCommitment:'--',
+            previousApplications:'--',
+            Application:'$123,456,789',
+            budgetVariance:'--',
+        },
+        supportingDocument: [{
+            fileId:'1',
+            fileName:'A4_CER1101.DOC',
+            fileDescription:'A4 CER1101'
+        },{
+            fileId:'2',
+            fileName:'A4_CER1101.DOC',
+            fileDescription:'A4 OLD1101'
+        }]
+    }];
+    
+    var infoArrayModel = ko.observableArray(infoArray);
+    ko.applyBindings(infoArrayModel,document.getElementById('pagetwo'));
+    
+    
+    
 </script>
 </html>
