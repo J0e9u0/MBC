@@ -27,15 +27,15 @@
             <span class="glyphicon glyphicon-th-list header-img" aria-hidden="true"></span>
         </div>
         <!-- 主要容器 -->
-        <div class="mycontainer" data-bind="foreach: panelArray" data-role="content" style="padding-bottom: 60px">
+        <div href="#pagetwo" class="mycontainer" data-bind="foreach: panelArray" data-role="content" style="padding-bottom: 60px">
             <!-- background-color: gainsboro; -->
             <!-- 面板 -->
+            <a href="#pagetwo" data-transition="slide" style="color: black !important;">
             <div class="panel panel-default mypanel">
-                <div class="panel-body mypanel-body" data-bind="click: $parent.gopagetwo">
+                <div class="panel-body mypanel-body"><!-- data-bind="click: $parent.gopagetwo"-->
                     <div class="text-label">
                         <strong data-bind="text: id"></strong>
                         <div class="btn-state" data-bind="text: state"></div>
-                        <a href="#" data-bind="click: $parent.removePanel" style="color: white">Remove</a>
                     </div>
                     <div class="text-label">
                         <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;<span class="text-key">2018-11-18</span> &nbsp;
@@ -58,16 +58,19 @@
                         <!-- ko if: revenveMode -->
                         <span class="col-6 text-key">Revenve Mode</span>
                         <!-- /ko -->
+                        
                     </div>
                     <div class="text-label">
                         <label class="col-6 text-value" data-bind="text: applicant"></label>
                         <!-- ko if: revenveMode -->
                         <span class="col-6 text-value" data-bind="text: revenveMode"></span>
                         <!-- /ko -->
+                        
                     </div>
                 </div>
-                <a class="glyphicon glyphicon-menu-right arrows-img" aria-hidden="true" href="#pagetwo" data-transition="slide"></a>
+                <a class="glyphicon glyphicon-menu-right arrows-img" aria-hidden="true" href="#pagetwo" data-transition="slide" style="color:gainsboro;"></a>
             </div>
+            </a>
         </div>
         <!-- 底部悬浮菜单 -->
         <div id="menu" class="menu">
@@ -92,7 +95,7 @@
             <!-- 顶部栏 -->
             <div class="info-header text-center">
                 <span class="info-title">OLR2018-0074</span>
-                <a href="#pageone" data-them='m'><span class="glyphicon glyphicon-menu-left backarrow-img" aria-hidden="true"></span></a>
+                <a href="#pageone" data-transition="slidefade" data-direction="reverse" data-them='m'><span class="glyphicon glyphicon-menu-left backarrow-img" aria-hidden="true" style="color:gainsboro;"></span></a>
             </div>
             <!-- 主要容器 -->
             <div class="info-container" style="padding-top: 50px">
@@ -124,7 +127,7 @@
                         <div class="info-panel-body line"></div>
                         <div class="info-bottem-label">
                             <label class="more-text">More</label>
-                            <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true"></a>
+                            <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true" style="color:gainsboro;"></a>
                         </div>
                     </div>
                 </div>
@@ -170,7 +173,7 @@
                         <div class="info-panel-body line"></div>
                         <div class="info-bottem-label">
                             <label class="more-text">More</label>
-                            <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true"></a>
+                            <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true" style="color:gainsboro;"></a>
                         </div>
                     </div>
                 </div>
@@ -198,7 +201,7 @@
                         <div class="info-panel-body line" style="position: relative;top: -1px;"></div>
                         <div class="info-bottem-label">
                             <label class="more-text">More</label>
-                            <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true"></a>
+                            <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true" style="color:gainsboro;"></a>
                         </div>
                     </div>
                 </div>
@@ -252,14 +255,8 @@
 
     function AppViewModel() {
         var self = this;
-
         self.panelArray = ko.observableArray(panelArray);
-
-        self.removePanel = function() {
-            //            self.panelArray.remove(this);
-        }
         self.gopagetwo = function() {
-            //          self.panelArray.remove(this);
             window.location.href = '#pagetwo';
         }
     }
@@ -302,5 +299,30 @@
 
     var infoArrayModel = ko.observableArray(infoArray);
     ko.applyBindings(infoArrayModel, document.getElementById('pagetwo'));
+    
+$(document).on("pagebeforeshow","#pagetwo",function(){ // 当进入页面二时
+  //alert("页面二即将显示");
+});
+$(document).on("pageshow","#pagetwo",function(){ // 当进入页面二时
+  //alert("现在显示页面二");
+});
+$(document).on("pagebeforehide","#pagetwo",function(){ // 当离开页面二时
+  //alert("页面二即将隐藏");
+});
+$(document).on("pagehide","#pagetwo",function(){ // 当离开页面二时
+  //alert("现在隐藏页面二");
+});
+$(document).on("pagebeforeshow","#pageone",function(){ // 当进入页面二时
+  //alert("页面1即将显示");
+});
+$(document).on("pageshow","#pageone",function(){ // 当进入页面二时
+  //alert("现在显示页面1");
+});
+$(document).on("pagebeforehide","#pageone",function(){ // 当离开页面二时
+  //alert("页面1即将隐藏");
+});
+$(document).on("pagehide","#pageone",function(){ // 当离开页面二时
+  //alert("现在隐藏页面1");
+});
 </script>
 </html>
