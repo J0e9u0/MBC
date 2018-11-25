@@ -27,7 +27,7 @@
             <span class="glyphicon glyphicon-th-list header-img" aria-hidden="true"></span>
         </div>
         <!-- 主要容器 -->
-        <div href="#pagetwo" class="mycontainer" data-bind="foreach: panelArray" data-role="content" style="padding-bottom: 60px">
+        <div class="mycontainer" data-bind="foreach: panelArray" data-role="content" style="padding-bottom: 60px">
             <!-- background-color: gainsboro; -->
             <!-- 面板 -->
             <a href="#pagetwo" data-transition="slide" style="color: black !important;">
@@ -256,9 +256,9 @@
     function AppViewModel() {
         var self = this;
         self.panelArray = ko.observableArray(panelArray);
-        self.gopagetwo = function() {
-            window.location.href = '#pagetwo';
-        }
+//        self.gopagetwo = function() {
+//            window.location.href = '#pagetwo';
+//        }
     }
 
     //    ko.applyBindings(panelArrayModel);
