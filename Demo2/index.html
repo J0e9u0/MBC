@@ -184,7 +184,7 @@
                             <label class="col-12 text-value">Supporting Document</label>
                         </div>
                         <div class="info-panel-body top-line" data-bind="foreach: infoArray[0].supportingDocument">
-                            <div class="info-file-label line" style="padding-top: 8px;">
+                            <div class="info-file-label" data-bind='css : {topLine:$index}' style="padding-top: 8px;"><!--line-->
                                 <div class="col-10" style="display: flex;flex-direction: row;">
                                     <img src="img/doc.png" class="doc-img">
                                     <div style="padding-left: 20px;">
@@ -198,8 +198,8 @@
                             </div>
                             <!--add-->
                         </div>
-                        <div class="info-panel-body line" style="position: relative;top: -1px;"></div>
-                        <div class="info-bottem-label">
+                        <div class="info-panel-body line"></div>
+                        <div class="info-bottem-label"><!--style="position: relative;top: -1px;"-->
                             <label class="more-text">More</label>
                             <a class="col-2 glyphicon glyphicon-menu-right more-arrows-img" aria-hidden="true" style="color:gainsboro;"></a>
                         </div>
@@ -300,29 +300,5 @@
     var infoArrayModel = ko.observableArray(infoArray);
     ko.applyBindings(infoArrayModel, document.getElementById('pagetwo'));
     
-$(document).on("pagebeforeshow","#pagetwo",function(){ // 当进入页面二时
-  //alert("页面二即将显示");
-});
-$(document).on("pageshow","#pagetwo",function(){ // 当进入页面二时
-  //alert("现在显示页面二");
-});
-$(document).on("pagebeforehide","#pagetwo",function(){ // 当离开页面二时
-  //alert("页面二即将隐藏");
-});
-$(document).on("pagehide","#pagetwo",function(){ // 当离开页面二时
-  //alert("现在隐藏页面二");
-});
-$(document).on("pagebeforeshow","#pageone",function(){ // 当进入页面二时
-  //alert("页面1即将显示");
-});
-$(document).on("pageshow","#pageone",function(){ // 当进入页面二时
-  //alert("现在显示页面1");
-});
-$(document).on("pagebeforehide","#pageone",function(){ // 当离开页面二时
-  //alert("页面1即将隐藏");
-});
-$(document).on("pagehide","#pageone",function(){ // 当离开页面二时
-  //alert("现在隐藏页面1");
-});
 </script>
 </html>

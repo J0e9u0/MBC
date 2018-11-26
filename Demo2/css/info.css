@@ -61,6 +61,12 @@
     border-top-color: whitesmoke;
 }
 
+.topLine{
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: whitesmoke;
+}
+
 .info-panel-title{
     border-left-style: solid;
     border-left-width: 6px;
