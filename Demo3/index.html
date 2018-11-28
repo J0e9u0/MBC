@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="css/info.css">
+</head>
+
+<body>
+<!-- App root element -->
+<div id="app">
+    <!-- Statusbar overlay -->
+    <div class="statusbar"></div>
+
+    <!-- Right panel with cover effect -->
+    <div class="panel panel-right panel-cover theme-dark">
+        <div class="view">
+            <div class="page">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="title">Right Panel</div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="block">Right panel content goes here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main view-init" data-url='/'>
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+            <!-- Top Navbar -->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="title sliding">Todo</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only panel-open" data-panel="right">
+                            <i class="icon f7-icons ios-only">menu</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="toolbar tabbar" style="height: 60px">
+                <div class="toolbar-inner">
+                    <div class="toolbar-inner">
+                        <!-- Links have "tab-link" class instead of just "link" to switch tabs -->
+                        <a href="#tab-1" class="tab-link tab-link-active">
+                            <div class="demo-icon-icon">
+                                <i class="f7-icons">data_fill</i>
+                            </div>
+                            <div class="demo-icon-name">Todo</div>
+                        </a>
+                        <a href="#tab-2" class="tab-link">
+                            <div class="demo-icon-icon"><i class="f7-icons">favorites</i></div>
+                            <div class="demo-icon-name">Approval</div>
+                        </a>
+                        <a href="/info/" class="tab-link">
+                            <div class="demo-icon-icon"><i class="f7-icons">person</i></div>
+                            <div class="demo-icon-name">Me</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scrollable page content -->
+            <div class="page-content">
+
+                <!-- container -->
+                <div class="row top no-gap">
+                    <a href="/info/" class="link col-100 tablet-50" style="display: block;color:black !important;">
+                        <div class="card left-color-belt">
+                            <div class="card-content card-content-padding img-arror-right">
+                                <div class="col-100 row text-label">
+                                    <div class="col-50">
+                                        <div><strong>CER2018-0513</strong></div>
+                                        <i class="icon f7-icons ios-only" style="font-size: 15px;">calendar</i>
+                                        <span class="text-key">2018-11-18</span>
+                                    </div>
+                                    <div class="col-50">
+                                        <button type="button" class="btn btn-primary btn-xs btn-state">Pending for
+                                            FINCON
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-100 row text-label">
+                                    <div class="col-50">
+                                        <div class="text-key">Total Amount</div>
+                                        <div class="text-number-value">$2,500,000</div>
+                                    </div>
+                                    <div class="col-50">
+                                        <div class="text-key">Unbudgete</div>
+                                        <div class="text-number-value">—</div>
+                                    </div>
+                                </div>
+                                <div class="col-100 row text-label">
+                                    <div class="col-50">
+                                        <div class="text-key">Applicant</div>
+                                        <div class="text-value">CHRISTINE S YAO</div>
+                                    </div>
+                                    <div class="col-50">
+                                        <div class="text-key">Revenve Mode</div>
+                                        <div class="text-value">Acquisiton</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="/info/" class="link col-100 tablet-50" style="display: block;color:black !important;">
+                        <div class="card left-color-belt">
+                            <div class="card-content card-content-padding img-arror-right">
+                                <div class="col-100 row text-label">
+                                    <div class="col-50">
+                                        <div><strong>CER2018-0513</strong></div>
+                                        <i class="icon f7-icons ios-only" style="font-size: 15px;">calendar</i>
+                                        <span class="text-key">2018-11-18</span>
+                                    </div>
+                                    <div class="col-50">
+                                        <button type="button" class="btn btn-primary btn-xs btn-state">Pending for
+                                            FINCON
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-100 row text-label">
+                                    <div class="col-50">
+                                        <div class="text-key">Total Amount</div>
+                                        <div class="text-number-value">$2,500,000</div>
+                                    </div>
+                                    <div class="col-50">
+                                        <div class="text-key">Unbudgete</div>
+                                        <div class="text-number-value">—</div>
+                                    </div>
+                                </div>
+                                <div class="col-100 row text-label">
+                                    <div class="col-50">
+                                        <div class="text-key">Applicant</div>
+                                        <div class="text-value">CHRISTINE S YAO</div>
+                                    </div>
+                                    <div class="col-50">
+                                        <div class="text-key">Revenve Mode</div>
+                                        <div class="text-value">Acquisiton</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<!-- Path to Framework7 Library JS-->
+<script src="js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script src="js/routes.js"></script>
+<script src="js/app.js"></script>
+<script>
+    $$('.accordion-item').on('accordion:opened', function () {
+        app.dialog.alert('Accordion item opened');
+    });
+
+    $$('.accordion-item').on('accordion:closed', function (e) {
+        app.dialog.alert('Accordion item closed');
+    });
+
+    app.on('accordionOpened', function (el) {
+        console.log('The following element opened:');
+        console.log(el);
+    });
+</script>
+
+</html>

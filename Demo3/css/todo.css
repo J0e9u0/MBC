@@ -1,0 +1,79 @@
+.demo-card-header-pic .card-header {
+  height: 80vw;
+  background-size: cover;
+  background-position: center;
+  color: #90ff7a;
+}
+.demo-card-header-pic .card-content-padding .date {
+    color: #8e8e93;
+}
+
+.left-color-belt{
+    border-left-width: 8px;
+    border-left-color: orange;
+    border-left-style: solid;
+}
+
+.text-label{
+    /*margin: 10px;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    word-break: break-word;
+}
+
+/*数据标签*/
+
+.text-key {
+    font-size: 12px;
+    color: gray;
+}
+
+/*字符串数据值*/
+
+.text-value {
+    font-size: 13px;
+    font-weight: 700;
+    padding-right: 1px;
+}
+
+/*数据值*/
+
+.text-number-value {
+    word-break: break-word;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.img-arror-right{
+    background-size: 8px 13px;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    background-image: url(../img/right-arror.svg);
+}
+
+.btn-state {
+    float: right;
+    border-radius: 25px;
+    width: 150px;
+    /*btn-xs*/
+    padding-top: 1px;
+    padding-right: 5px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    font-size: 12px;
+    line-height: 1.7;
+    /*btn-primary*/
+    color: #fff;
+    background-color: #337ab7;
+    /*btn*/
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    border: 3px solid
+}
+
+/*----------------------------------------*/
+
+label{
+    display: inline-block;
+}
