@@ -1,11 +1,25 @@
-.demo-card-header-pic .card-header {
-  height: 80vw;
-  background-size: cover;
-  background-position: center;
-  color: #90ff7a;
+#todoPage .toolbar-height{
+    height: 60px;
 }
-.demo-card-header-pic .card-content-padding .date {
-    color: #8e8e93;
+
+#todoPage .calendar-img-size{
+    font-size: 15px;
+}
+
+#todoPage .blank-bottom{
+    margin-bottom: 20px;
+}
+
+#todoPage .pull{
+    display: -webkit-inline-flex;
+}
+
+#todoTitle{
+    color: white;
+}
+
+#app .navbar{
+    background: #118FFD;
 }
 
 .left-color-belt{
@@ -42,6 +56,10 @@
     word-break: break-word;
     font-size: 19px;
     font-weight: 700;
+}
+
+.value-color-blue{
+    color: cornflowerblue;
 }
 
 .img-arror-right{

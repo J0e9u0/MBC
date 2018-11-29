@@ -13,6 +13,7 @@
     <title>My App</title>
     <!-- Path to Framework7 Library CSS, Material Theme -->
     <link rel="stylesheet" href="css/framework7.min.css">
+    <script type='text/javascript' src='https://knockoutjs.com/downloads/knockout-3.4.2.js'></script>
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/app.css">
@@ -26,41 +27,44 @@
     <!-- Statusbar overlay -->
     <div class="statusbar"></div>
 
-    <!-- Right panel with cover effect -->
-    <div class="panel panel-right panel-cover theme-dark">
-        <div class="view">
-            <div class="page">
-                <div class="navbar">
-                    <div class="navbar-inner">
-                        <div class="title">Right Panel</div>
+
+
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main " data-url='/'>
+        <!-- Right panel with cover effect -->
+        <div class="panel panel-right panel-cover theme-dark">
+            <div class="view">
+                <div class="page">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="title">Right Panel</div>
+                        </div>
                     </div>
-                </div>
-                <div class="page-content">
-                    <div class="block">Right panel content goes here</div>
+                    <div class="page-content">
+                        <div class="block">Right panel content goes here</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main view-init" data-url='/'>
+
         <!-- Initial Page, "data-name" contains page name -->
-        <div data-name="home" class="page">
+        <div id="todoPage" data-name="home" class="page">
 
             <!-- Top Navbar -->
             <div class="navbar">
                 <div class="navbar-inner">
-                    <div class="title sliding">Todo</div>
+                    <div id="todoTitle" class="title sliding color-white">Todo</div>
                     <div class="right">
                         <a href="#" class="link icon-only panel-open" data-panel="right">
-                            <i class="icon f7-icons ios-only">menu</i>
+                            <i class="icon f7-icons ios-only color-white">menu</i>
                         </a>
                     </div>
                 </div>
             </div>
 
             <!-- Toolbar -->
-            <div class="toolbar tabbar" style="height: 60px">
+            <div class="toolbar tabbar toolbar-height">
                 <div class="toolbar-inner">
                     <div class="toolbar-inner">
                         <!-- Links have "tab-link" class instead of just "link" to switch tabs -->
@@ -70,7 +74,7 @@
                             </div>
                             <div class="demo-icon-name">Todo</div>
                         </a>
-                        <a href="#tab-2" class="tab-link">
+                        <a id="approval" href="#tab-2" class="tab-link">
                             <div class="demo-icon-icon"><i class="f7-icons">favorites</i></div>
                             <div class="demo-icon-name">Approval</div>
                         </a>
@@ -83,88 +87,62 @@
             </div>
 
             <!-- Scrollable page content -->
-            <div class="page-content">
+            <div class="page-content ptr-content">
+
+                <div class="ptr-preloader">
+                    <div class="preloader"></div>
+                    <div class="ptr-arrow"></div>
+                </div>
 
                 <!-- container -->
-                <div class="row top no-gap">
-                    <a href="/info/" class="link col-100 tablet-50" style="display: block;color:black !important;">
-                        <div class="card left-color-belt">
+                <div id="cardContainer" class="row top no-gap blank-bottom" data-bind="foreach: panelArray">
+                    <!--<a id="cardExample" href="/info/" class="link col-100 tablet-50" style="display: block;color:black !important;">-->
+                    <div class="col-100 tablet-50" style="display: block">
+                        <div class="card left-color-belt " data-bind="click: $parent.getInfo">
                             <div class="card-content card-content-padding img-arror-right">
                                 <div class="col-100 row text-label">
                                     <div class="col-50">
-                                        <div><strong>CER2018-0513</strong></div>
-                                        <i class="icon f7-icons ios-only" style="font-size: 15px;">calendar</i>
+                                        <div><strong data-bind="text: cid"></strong></div>
+                                        <i class="icon f7-icons ios-only calendar-img-size">calendar</i>
                                         <span class="text-key">2018-11-18</span>
                                     </div>
                                     <div class="col-50">
-                                        <button type="button" class="btn btn-primary btn-xs btn-state">Pending for
-                                            FINCON
+                                        <button type="button" class="btn btn-primary btn-xs btn-state">
+                                            <span data-bind="text: state"></span>
                                         </button>
                                     </div>
                                 </div>
                                 <div class="col-100 row text-label">
                                     <div class="col-50">
                                         <div class="text-key">Total Amount</div>
-                                        <div class="text-number-value">$2,500,000</div>
+                                        <div class="text-number-value" data-bind="text: totalAmount"></div>
                                     </div>
                                     <div class="col-50">
                                         <div class="text-key">Unbudgete</div>
+                                        <!-- ko if: unbudgete -->
+                                        <div class="text-number-value value-color-blue" data-bind="text: unbudgete"></div>
+                                        <!-- /ko -->
+                                        <!-- ko ifnot: unbudgete -->
                                         <div class="text-number-value">—</div>
+                                        <!-- /ko -->
                                     </div>
                                 </div>
                                 <div class="col-100 row text-label">
                                     <div class="col-50">
                                         <div class="text-key">Applicant</div>
-                                        <div class="text-value">CHRISTINE S YAO</div>
+                                        <div class="text-value" data-bind="text: applicant"></div>
                                     </div>
                                     <div class="col-50">
+                                        <!-- ko if: revenveMode -->
                                         <div class="text-key">Revenve Mode</div>
-                                        <div class="text-value">Acquisiton</div>
+                                        <div class="text-value" data-bind="text: revenveMode"></div>
+                                        <!-- /ko -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
-
-                    <a href="/info/" class="link col-100 tablet-50" style="display: block;color:black !important;">
-                        <div class="card left-color-belt">
-                            <div class="card-content card-content-padding img-arror-right">
-                                <div class="col-100 row text-label">
-                                    <div class="col-50">
-                                        <div><strong>CER2018-0513</strong></div>
-                                        <i class="icon f7-icons ios-only" style="font-size: 15px;">calendar</i>
-                                        <span class="text-key">2018-11-18</span>
-                                    </div>
-                                    <div class="col-50">
-                                        <button type="button" class="btn btn-primary btn-xs btn-state">Pending for
-                                            FINCON
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-100 row text-label">
-                                    <div class="col-50">
-                                        <div class="text-key">Total Amount</div>
-                                        <div class="text-number-value">$2,500,000</div>
-                                    </div>
-                                    <div class="col-50">
-                                        <div class="text-key">Unbudgete</div>
-                                        <div class="text-number-value">—</div>
-                                    </div>
-                                </div>
-                                <div class="col-100 row text-label">
-                                    <div class="col-50">
-                                        <div class="text-key">Applicant</div>
-                                        <div class="text-value">CHRISTINE S YAO</div>
-                                    </div>
-                                    <div class="col-50">
-                                        <div class="text-key">Revenve Mode</div>
-                                        <div class="text-value">Acquisiton</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
+                    </div>
+                    <!--</a>-->
 
                 </div>
             </div>
@@ -179,18 +157,9 @@
 <script src="js/routes.js"></script>
 <script src="js/app.js"></script>
 <script>
-    $$('.accordion-item').on('accordion:opened', function () {
-        app.dialog.alert('Accordion item opened');
-    });
 
-    $$('.accordion-item').on('accordion:closed', function (e) {
-        app.dialog.alert('Accordion item closed');
-    });
 
-    app.on('accordionOpened', function (el) {
-        console.log('The following element opened:');
-        console.log(el);
-    });
+
 </script>
 
 </html>

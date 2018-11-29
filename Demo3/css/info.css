@@ -6,12 +6,45 @@
     margin-top: 10px;
 }
 
+#infoPage .card{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#infoPage .card-content-padding{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0px;
+}
+
+#infoPage .file-content-padding{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+#infoPage .card-header{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#infoPage .card-footer{
+    padding: 0px;
+    min-height:30px
+}
+
+#infoTitle{
+    color: white;
+}
+
 .info-panel-title {
     border-left-style: solid;
-    border-left-width: 6px;
+    border-left-width: 5px;
     border-left-color: cornflowerblue;
-    /*height: 20px;*/
-    padding-left: 4px;
+    padding-left: 10px;
+    margin-left: -2px;
 }
 
 .more-text{
@@ -39,15 +72,19 @@
     /*margin-right: 5px;*/
 }
 
+#infoPage .number-value {
+    font-weight: 700;
+    color: cornflowerblue;
+}
+
 .info-file-label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-left: 10px;
-    /* padding-left: 25px; */
     margin-right: 10px;
-    /* padding-right: 5px; */
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .doc-img {
@@ -55,8 +92,20 @@
     height: 50px;
 }
 
-.top-line{
+.topLine{
     border-top-style: solid;
     border-top-width: 1px;
     border-top-color: whitesmoke;
+}
+
+.file-info{
+    padding-left: 20px;
+}
+
+.file-download-img{
+    padding-top: 10px;
+}
+
+.chevron-right-img{
+    font-size: 15px;
 }
