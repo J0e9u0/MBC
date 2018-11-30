@@ -60,34 +60,12 @@ $$(document).on('page:beforeremove', function (e) {
     console.log('page:beforeremove:Event will be triggered right before Page will be removed from DOM');
 });
 
-// Pull to refresh content
-let $ptrContent = $$('.ptr-content');
-// Add 'refresh' listener on it
-$ptrContent.on('ptr:refresh', function (e) {
-    // Emulate 2s loading
-    setTimeout(function () {
-        let newCard = $$("#cardExample");
-        // Prepend new list element
-        app.dialog.alert('Pull to refresh content');
-        $ptrContent.find('#cardContainer').prepend(newCard);
-        // When loading done, we need to reset it
-        app.ptr.done(); // or e.detail();
-    }, 2000);
-});
 
 $$('#approval').on('click', function () {
     // Alert username and password
     app.dialog.alert('click approval');
 });
 
-var test = {
-    cid: 'CER2018-0513',
-    state: 'Pending for FINCON',
-    totalAmount: '$2,500,000',
-    unbudgete: '—',
-    applicant: 'CHRISTINE S YAO',
-    revenveMode: 'Acquisiton'
-};
 
 var panelArray = [{
     cid: 'CER2018-0513',
@@ -160,4 +138,38 @@ function AppViewModel() {
         });
     }
 }
-ko.applyBindings(new AppViewModel(), document.getElementById('todoPage'));
+var todoViewModule = new AppViewModel();
+ko.applyBindings(todoViewModule, document.getElementById('todoPage'));
+
+function randomId(){
+    let num = [];
+    for(let i = 0; i < 4; i++){
+        num.push(parseInt(Math.random()*9,10)+1);
+    }
+    let id = 'CER2018-' + num[0] + num[1] + num[2] + num[3];
+    return id;
+}
+
+/* 下拉刷新事件 Pull to refresh content*/
+let $ptrContent = $$('.ptr-content');
+// Add 'refresh' listener on it
+$ptrContent.on('ptr:refresh', function (e) {
+    // Emulate 2s loading
+    setTimeout(function () {
+        let test = {
+            cid: 'CER2018-0001',
+            state: 'Initial Checking',
+            totalAmount: '$7,500,000',
+            unbudgete: null,
+            applicant: 'JONATHAN JOSDA',
+            revenveMode: 'Acquisiton'
+        };
+        // Prepend new list element
+        // app.dialog.alert('Pull to refresh content');
+        test.cid = randomId();
+        todoViewModule.panelArray.splice(0,0,test);
+        //$ptrContent.find('#cardContainer').prepend(newCard);
+        // When loading done, we need to reset it
+        app.ptr.done(); // or e.detail();
+    }, 2000);
+});

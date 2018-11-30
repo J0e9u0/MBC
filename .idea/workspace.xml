@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49c12492-9821-4f91-bb19-887e63d769c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo3/css/info.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/css/info.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo3/css/todo.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/css/todo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo3/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo3/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/js/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo3/pages/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/pages/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo3/pages/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/pages/404.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,29 +22,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="99" column="58" lean-forward="true" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo3/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="147" column="25" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
+            <state relative-caret-position="345">
+              <caret line="100" column="93" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="93" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Demo3/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="516">
+              <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo3/js/routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo3/pages/404.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -55,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo3/pages/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="119" column="78" selection-start-line="119" selection-start-column="78" selection-end-line="119" selection-end-column="78" />
+            <state relative-caret-position="-17">
+              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -106,18 +109,19 @@
       <list>
         <option value="$PROJECT_DIR$/Demo3/test.html" />
         <option value="$PROJECT_DIR$/Demo3/info.html" />
-        <option value="$PROJECT_DIR$/Demo3/index.html" />
         <option value="$PROJECT_DIR$/Demo3/css/todo.css" />
-        <option value="$PROJECT_DIR$/Demo3/js/app.js" />
         <option value="$PROJECT_DIR$/Demo3/css/info.css" />
         <option value="$PROJECT_DIR$/Demo3/pages/info.html" />
         <option value="$PROJECT_DIR$/Demo3/js/routes.js" />
+        <option value="$PROJECT_DIR$/Demo3/pages/404.html" />
+        <option value="$PROJECT_DIR$/Demo3/index.html" />
+        <option value="$PROJECT_DIR$/Demo3/js/app.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="312" />
-    <option name="y" value="30" />
+    <option name="x" value="468" />
+    <option name="y" value="5" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -198,16 +202,15 @@
       <option name="presentableId" value="Default" />
       <updated>1543368810601</updated>
       <workItem from="1543368814263" duration="48339000" />
-      <workItem from="1543482917142" duration="2118000" />
+      <workItem from="1543482917142" duration="7960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50457000" />
+    <option name="totallyTimeSpent" value="56299000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="312" y="30" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
+    <frame x="468" y="5" width="1400" height="1000" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19456682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -247,23 +250,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo3/info.html" />
-    <entry file="file://$PROJECT_DIR$/Demo3/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="99" column="58" lean-forward="true" selection-start-line="99" selection-start-column="58" selection-end-line="99" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo3/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="147" column="25" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo3/css/todo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -278,20 +264,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo3/pages/info.html">
+    <entry file="file://$PROJECT_DIR$/Demo3/pages/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="119" column="78" selection-start-line="119" selection-start-column="78" selection-end-line="119" selection-end-column="78" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo3/js/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="100" column="93" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo3/pages/info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo3/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
         </state>
       </provider>
     </entry>

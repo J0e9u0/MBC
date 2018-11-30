@@ -30,7 +30,7 @@ var routes = [
         },
     },
     {
-        path: '/about/',
-        url: './pages/about.html'
+        path: '/404/',
+        url: './pages/404.html'
     }
 ];
