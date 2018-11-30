@@ -10,9 +10,9 @@
     margin-bottom: 20px;
 }
 
-#todoPage .pull{
-    display: -webkit-inline-flex;
-}
+/*#todoPage .pull{*/
+    /*display: -webkit-inline-flex;*/
+/*}*/
 
 #todoTitle{
     color: white;

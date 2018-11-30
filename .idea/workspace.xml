@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="49c12492-9821-4f91-bb19-887e63d769c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo3/css/todo.css" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/css/todo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo3/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Demo3/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/js/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Demo3/pages/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/pages/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Demo3/pages/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/Demo3/pages/info.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,26 +23,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo3/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="100" column="93" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="93" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Demo3/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
+            <state relative-caret-position="-538">
+              <caret line="66" column="38" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="38" />
+              <folding>
+                <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo3/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="172" column="38" lean-forward="true" selection-start-line="172" selection-start-column="38" selection-end-line="172" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo3/js/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="34" />
+            <state relative-caret-position="187">
+              <caret line="11" column="69" lean-forward="true" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -58,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo3/pages/info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            <state relative-caret-position="170">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -70,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo3/css/info.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="751">
-              <caret line="108" column="18" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="18" />
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="35" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -79,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo3/css/todo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="22" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -99,9 +103,16 @@
     <findStrings>
       <find>top-line</find>
       <find>id</find>
+      <find>card</find>
+      <find>tabbar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="J0e9u0 &lt;joe.guo@oocl.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -109,13 +120,13 @@
       <list>
         <option value="$PROJECT_DIR$/Demo3/test.html" />
         <option value="$PROJECT_DIR$/Demo3/info.html" />
-        <option value="$PROJECT_DIR$/Demo3/css/todo.css" />
         <option value="$PROJECT_DIR$/Demo3/css/info.css" />
-        <option value="$PROJECT_DIR$/Demo3/pages/info.html" />
-        <option value="$PROJECT_DIR$/Demo3/js/routes.js" />
         <option value="$PROJECT_DIR$/Demo3/pages/404.html" />
-        <option value="$PROJECT_DIR$/Demo3/index.html" />
+        <option value="$PROJECT_DIR$/Demo3/pages/info.html" />
         <option value="$PROJECT_DIR$/Demo3/js/app.js" />
+        <option value="$PROJECT_DIR$/Demo3/css/todo.css" />
+        <option value="$PROJECT_DIR$/Demo3/index.html" />
+        <option value="$PROJECT_DIR$/Demo3/js/routes.js" />
       </list>
     </option>
   </component>
@@ -202,12 +213,20 @@
       <option name="presentableId" value="Default" />
       <updated>1543368810601</updated>
       <workItem from="1543368814263" duration="48339000" />
-      <workItem from="1543482917142" duration="7960000" />
+      <workItem from="1543482917142" duration="21649000" />
     </task>
+    <task id="LOCAL-00001" summary="upgrade pull reflash and add 404 page">
+      <created>1543544995744</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1543544995744</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56299000" />
+    <option name="totallyTimeSpent" value="69988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="468" y="5" width="1400" height="1000" extended-state="0" />
@@ -225,7 +244,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3298731" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -233,6 +252,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="upgrade pull reflash and add 404 page" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade pull reflash and add 404 page" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Demo3/test.html">
@@ -250,20 +273,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo3/info.html" />
-    <entry file="file://$PROJECT_DIR$/Demo3/css/todo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo3/css/info.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="751">
-          <caret line="108" column="18" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo3/pages/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -271,34 +280,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo3/js/routes.js">
+    <entry file="file://$PROJECT_DIR$/Demo3/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="496">
+          <caret line="172" column="38" lean-forward="true" selection-start-line="172" selection-start-column="38" selection-end-line="172" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo3/css/info.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo3/css/todo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="22" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo3/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="100" column="93" selection-start-line="100" selection-start-column="59" selection-end-line="100" selection-end-column="93" />
+        <state relative-caret-position="-538">
+          <caret line="66" column="38" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="38" />
+          <folding>
+            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo3/pages/info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        <state relative-caret-position="170">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo3/js/app.js">
+    <entry file="file://$PROJECT_DIR$/Demo3/js/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="163" column="38" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
+        <state relative-caret-position="187">
+          <caret line="11" column="69" lean-forward="true" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
         </state>
       </provider>
     </entry>

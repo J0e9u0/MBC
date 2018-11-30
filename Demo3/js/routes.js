@@ -8,7 +8,8 @@ var routes = [
             pageInit: function (page) {
                 console.log('info pageInit');
                 // console.log(page);
-                var cid = page.detail.route.query.cid;
+                // var cid = page.detail.route.params.cid;
+                var cid = page.detail.router.currentRoute.params.cid;
                 console.log(cid);
                 infoArray.id = cid;
                 $$('#infoTitle')[0].innerText = cid;

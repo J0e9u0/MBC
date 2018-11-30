@@ -21,18 +21,27 @@ var app = new Framework7({
         pageInit: function () {
             console.log('Page initialized');
 
+        },
+        popupOpen: function (popup) {
+            // do something on popup open
+            console.log('Popup Open');
+            console.log(popup);
         }
     }
 });
 
 var mainView = app.views.create('.view-main');
 
+/*右侧面板开启事件*/
+app.on('panelOpen', function (panel) {
+    console.log('Panel ' + panel.side + ' opened');
+});
 
 $$(document).on('app:init', function (e) {
     console.log('app:init');
 });
 $$(document).on('page:init', function (e, page) {
-    // console.log(page);
+    console.log(page);
 });
 
 $$(document).on('page:mounted', function (e) {
@@ -41,8 +50,9 @@ $$(document).on('page:mounted', function (e) {
 $$(document).on('page:init', function (e) {
     console.log('page:init:Event will be triggered after Framework7 initialize required page\'s components and navbar');
 });
-$$(document).on('page:reinit', function (e) {
+$$(document).on('page:reinit', function (e, page) {
     console.log('page:reinit:This event will be triggered in case of navigating to the page that was already initialized.');
+    console.log(page);
 });
 $$(document).on('page:beforein', function (e) {
     console.log('page:beforein:Event will be triggered when everything initialized and page is ready to be transitioned into view (into active/current position)');
@@ -60,10 +70,16 @@ $$(document).on('page:beforeremove', function (e) {
     console.log('page:beforeremove:Event will be triggered right before Page will be removed from DOM');
 });
 
+$$(document).on('swipeback:move', function (e) {
+    console.log('swipeback:move:Event will be triggered during swipe back move');
+});
+
 
 $$('#approval').on('click', function () {
     // Alert username and password
     app.dialog.alert('click approval');
+    // mainView.router.load('/404/')
+    mainView.router.back();
 });
 
 
@@ -131,22 +147,17 @@ function AppViewModel() {
     self.getInfo = function(card) {
         console.log(card);
         // mainView.router.loadPage('/info/');
-        app.router.navigate({
-            name: 'info',
-            query:{ cid: card.cid },
-            params:{ cid: card.cid }
-        });
+        app.router.navigate('/info/' + card.cid);
     }
 }
 var todoViewModule = new AppViewModel();
 ko.applyBindings(todoViewModule, document.getElementById('todoPage'));
 
 function randomId(){
-    let num = [];
-    for(let i = 0; i < 4; i++){
-        num.push(parseInt(Math.random()*9,10)+1);
+    let id = 'CER2018-0';
+    for(let i = 0; i < 3; i++){
+        id += (parseInt(Math.random()*9,10)+1);
     }
-    let id = 'CER2018-' + num[0] + num[1] + num[2] + num[3];
     return id;
 }
 
