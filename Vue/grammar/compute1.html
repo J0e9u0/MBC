@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>计算属性的 setter</h1>
+    <div id="demo">
+        <p>fullName:{{ fullName }}</p>
+        <p>firstName:{{ firstName }}</p>
+        <p>lastName:{{ lastName }}</p>
+    </div>
+</div>
+
+</body>
+<script>
+    var vm = new Vue({
+        el: '#demo',
+        data: {
+            firstName: 'Foo',
+            lastName: 'Bar'
+        },
+        computed: {
+            fullName: {
+                // getter
+                get: function () {
+                    return this.firstName + ' ' + this.lastName
+                },
+                // setter
+                set: function (newValue) {
+                    var names = newValue.split(' ');
+                    this.firstName = names[0];
+                    this.lastName = names[names.length - 1]
+                }
+            }
+        }
+    })
+    // vm.fullName = 'John Doe'
+</script>
+</html>

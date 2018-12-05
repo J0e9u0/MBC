@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>模板语法</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>插值</h1>
+    <span>Message: {{ msg }}</span><br>
+    <span v-once>这个将不会改变: {{ msgOnce }}</span>
+    <h2>原始 HTML</h2>
+    <p>Using mustaches: {{ rawHtml }}</p>
+    <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    <h2>特性</h2>
+    <div v-bind:id="dynamicId">
+        <button v-bind:disabled="isButtonDisabled">Button</button>
+    </div>
+    <h2>使用 JavaScript 表达式</h2>
+    <p>{{ msg.split('').reverse().join('') }}</p>
+    <h2>指令</h2>
+    <p v-if="seen">现在你看到我了</p>
+    <h2>参数</h2>
+    <a v-bind:href="url">Vue Doc</a>
+</div>
+
+</body>
+<script>
+    var data = {
+        msg: 'Hello world!!!',
+        msgOnce: 'hello once',
+        rawHtml: '<span style="color:red">This should be red.</span>',
+        dynamicId: 'd1',
+        isButtonDisabled: false,
+        seen: true,
+        url: 'https://cn.vuejs.org/v2/guide/syntax.html'
+    };
+    new Vue({
+        el:'#app',
+        data: data
+    });
+</script>
+</html>

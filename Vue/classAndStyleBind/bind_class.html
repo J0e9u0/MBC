@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Class 与 Style 绑定</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+
+    <h1>绑定 HTML Class</h1>
+    <div id="demo">
+        <h2>对象语法</h2>
+        <div v-bind:class="{ active: isActive }">
+            <p>lalala</p>
+        </div>
+        <h2>返回对象</h2>
+        <div v-bind:class="classObject"></div>
+        <h2>返回对象的计算属性</h2>
+        <div v-bind:class="classObject1"></div>
+    </div>
+
+
+</body>
+<script>
+    var data = {
+        isActive : true,
+        classObject: {
+            active: false,
+            'text-danger': true
+        },
+        isActive : true,
+        error : false
+    };
+    var vm = new Vue({
+        el: '#demo',
+        data: data,
+        computed: {
+            classObject1: function () {
+                return {
+                    active: this.isActive && !this.error,
+                    'text-danger': this.error && this.error.type === 'fatal'
+                }
+            }
+        }
+    })
+    // vm.fullName = 'John Doe'
+</script>
+</html>

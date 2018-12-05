@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+<!-- this is our View -->
+<div id="example-1">
+    Hello {{ name }}!
+</div>
+<!-- this is our View -->
+<div id="example-2">
+    <p v-if="greeting">Hello!</p>
+</div>
+
+<!---------------- VUE-->
+<script>
+    // this is our Model
+    var exampleData = {
+        name: 'Vue.js'
+    };
+    // create a Vue instance, or, a "ViewModel"
+    // which links the View and the Model
+    var exampleVM = new Vue({
+        el: '#example-1',
+        data: exampleData
+    })
+    //F12
+    // exampleVM.name = 123
+
+    // create a Vue instance, or, a "ViewModel"
+    // which links the View and the Model
+    var exampleVM2 = new Vue({
+        el: '#example-2',
+        data: {
+            greeting: true
+        }
+    })
+    // exampleVM2.greeting = 0
+    // exampleVM2.greeting = 1
+</script>
+</body>
+
+</html>
