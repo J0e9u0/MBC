@@ -21,19 +21,19 @@
               <f7-card class="left-color-belt">
                 <f7-card-content class="card-content-padding img-arrow-right">
                   <div v-on:click="goInfo(card, $event)">
-                  <f7-row width="100" class="text-label">
-                    <f7-col width="50">
-                      <div><strong>{{card.cid}}</strong></div>
-                      <i class="icon f7-icons ios-only calendar-img-size">calendar</i>
-                      <span class="text-key">2018-11-18</span>
-                    </f7-col>
-                    <f7-col width="50">
-                      <button type="button" class="btn btn-primary btn-xs btn-state">
-                        <span>{{card.state}}</span>
-                      </button>
-                    </f7-col>
-                  </f7-row>
-                  <f7-row width="100" class="text-label">
+                    <f7-row width="100" class="text-label">
+                      <f7-col width="50">
+                        <div><strong>{{card.cid}}</strong></div>
+                        <i class="icon f7-icons ios-only calendar-img-size">calendar</i>
+                        <span class="text-key">2018-11-18</span>
+                      </f7-col>
+                      <f7-col width="50">
+                        <button type="button" class="btn btn-primary btn-xs btn-state">
+                          <span>{{card.state}}</span>
+                        </button>
+                      </f7-col>
+                    </f7-row>
+                    <f7-row width="100" class="text-label">
                     <f7-col width="50">
                       <div class="text-key">Total Amount</div>
                       <div class="text-number-value">{{card.totalAmount}}</div>
@@ -43,17 +43,17 @@
                         <div v-if="card.unbudgete" class="text-number-value value-color-blue">{{card.unbudgete}}</div>
                       <div v-else class="text-number-value">—</div>
                     </f7-col>
-                  </f7-row>
-                  <f7-row width="100" class="text-label">
-                    <f7-col width="50">
-                      <div class="text-key">Applicant</div>
-                      <div class="text-value">{{card.applicant}}</div>
-                    </f7-col>
-                    <f7-col width="50">
-                      <div v-if="card.revenveMode" class="text-key">Revenve Mode</div>
-                      <div v-if="card.revenveMode" class="text-value">{{card.revenveMode}}</div>
+                    </f7-row>
+                      <f7-row width="100" class="text-label">
+                      <f7-col width="50">
+                        <div class="text-key">Applicant</div>
+                        <div class="text-value">{{card.applicant}}</div>
                       </f7-col>
-                  </f7-row>
+                      <f7-col width="50">
+                        <div v-if="card.revenveMode" class="text-key">Revenve Mode</div>
+                        <div v-if="card.revenveMode" class="text-value">{{card.revenveMode}}</div>
+                      </f7-col>
+                    </f7-row>
                   </div>
                 </f7-card-content>
               </f7-card>
@@ -138,7 +138,6 @@
       },
       loadMore(event, done) {
         const self = this;
-
         setTimeout(() => {
           let dummyData = {
             cid: 'CER2018-0001',

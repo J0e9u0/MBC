@@ -14,6 +14,14 @@
     /*display: -webkit-inline-flex;*/
 /*}*/
 
+#todoPage .card{
+  margin-bottom: 5px;
+}
+
+#todoPage .card-content-padding{
+  padding: 10px;
+}
+
 #tab-todo .block {
   margin-top: 0px;
   padding: 0px;
