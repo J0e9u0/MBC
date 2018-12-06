@@ -74,7 +74,7 @@
                         <label class="number-value" data-bind="text: infoArray[0].haveBudgeted.application"></label>
                         <!-- /ko -->
                         <!-- ko ifnot: infoArray[0].haveBudgeted.application -->
-                        <label data-bind="text: infoArray[0].haveBudgeted.budgetVariance"></label>
+                        <label>--</label>
                         <!-- /ko -->
                     </div>
                 </div>
@@ -104,8 +104,7 @@
                     <div class="col-80" style="display: flex;flex-direction: row;">
                         <img src="img/doc.png" class="doc-img">
                         <div class="file-info">
-                            <label class="text-value" data-bind="text: fileName"></label><br
-                                data-brackets-id="332">
+                            <label class="text-value" data-bind="text: fileName"></label><br data-brackets-id="332">
                             <span class="text-key" data-bind="text: fileDescription"></span>
                         </div>
                     </div>
@@ -122,4 +121,3 @@
         </div>
     </div>
 </div>
-
