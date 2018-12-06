@@ -1,26 +1,27 @@
 <template>
-  <f7-page id="todoPage">
+  <f7-page id="todoPage" ptr @ptr:refresh="loadMore">
     <f7-navbar>
       <f7-nav-title id="todoTitle">Todo</f7-nav-title>
       <f7-nav-right>
-        <f7-link icon-if-ios="f7:menu" icon-if-md="material:menu" panel-open="right" class="color-white"></f7-link>
+        <f7-link icon-if-ios="f7:filter" icon-if-md="material:menu" panel-open="right" class="color-white"></f7-link>
       </f7-nav-right>
     </f7-navbar>
 
     <f7-toolbar tabbar labels>
-      <f7-link tab-link="#tab-1" tab-link-active text="Todo" icon-ios="f7:data_fill" icon-md="material:email"></f7-link>
-      <f7-link tab-link="#tab-2" text="Approval" icon-ios="f7:favorites" icon-md="material:today"></f7-link>
-      <f7-link tab-link="#tab-3" text="Me" icon-ios="f7:person" icon-md="material:file_upload"></f7-link>
+      <f7-link tab-link="#tab-todo" tab-link-active text="Todo" icon-ios="f7:data_fill" icon-size="24px" icon-md="material:email"></f7-link>
+      <f7-link tab-link="#tab-approval" text="Approval" icon-ios="f7:favorites" icon-size="23px" icon-md="material:today"></f7-link>
+      <f7-link tab-link="#tab-me" text="Me" icon-ios="f7:person" icon-size="24px" icon-md="material:file_upload"></f7-link>
     </f7-toolbar>
 
     <f7-tabs>
-      <f7-tab id="todoTab" tab-active>
+      <f7-tab id="tab-todo" tab-active>
         <f7-block>
-          <f7-row no-gap v-for="card in cardArray">
-            <f7-col width="100" tablet-width="50">
+          <f7-row no-gap>
+            <f7-col width="100" tablet-width="50" v-for="card in cardArray">
               <f7-card class="left-color-belt">
-                <f7-card-content class="card-content-padding img-arror-right">
-                  <div class="col-100 row text-label">
+                <f7-card-content class="card-content-padding img-arrow-right">
+                  <div v-on:click="goInfo(card, $event)">
+                  <f7-row width="100" class="text-label">
                     <f7-col width="50">
                       <div><strong>{{card.cid}}</strong></div>
                       <i class="icon f7-icons ios-only calendar-img-size">calendar</i>
@@ -31,7 +32,7 @@
                         <span>{{card.state}}</span>
                       </button>
                     </f7-col>
-                  </div>
+                  </f7-row>
                   <f7-row width="100" class="text-label">
                     <f7-col width="50">
                       <div class="text-key">Total Amount</div>
@@ -43,7 +44,7 @@
                       <div v-else class="text-number-value">—</div>
                     </f7-col>
                   </f7-row>
-                  <div class="col-100 row text-label">
+                  <f7-row width="100" class="text-label">
                     <f7-col width="50">
                       <div class="text-key">Applicant</div>
                       <div class="text-value">{{card.applicant}}</div>
@@ -52,6 +53,7 @@
                       <div v-if="card.revenveMode" class="text-key">Revenve Mode</div>
                       <div v-if="card.revenveMode" class="text-value">{{card.revenveMode}}</div>
                       </f7-col>
+                  </f7-row>
                   </div>
                 </f7-card-content>
               </f7-card>
@@ -59,13 +61,13 @@
           </f7-row>
         </f7-block>
       </f7-tab>
-      <f7-tab id="tab-2" class="page-content">
+      <f7-tab id="tab-approval" class="page-content">
         <f7-block>
           <p>Tab 2 content</p>
           ...
         </f7-block>
       </f7-tab>
-      <f7-tab id="tab-3" class="page-content">
+      <f7-tab id="tab-me" class="page-content">
         <f7-block>
           <p>Tab 3 content</p>
           ...
@@ -85,7 +87,7 @@
   export default {
     data() {
       return {
-        cardArray : [{
+        cardArray: [{
           cid: 'CER2018-0513',
           state: 'Pending for FINCON',
           totalAmount: '$2,500,001',
@@ -114,6 +116,42 @@
           applicant: 'HELEN TONG',
           revenveMode: 'Acquisiton'
         }]
+      }
+    },
+    methods: {
+      goInfo: function (data, event) {
+        // `this` 在方法里指向当前 Vue 实例
+        // `event` 是原生 DOM 事件
+        console.log(data.cid);
+        this.$f7router.navigate('/info/' + data.cid, {
+          props: {
+            cid: data.cid
+          }
+        });
+      },
+      randomId() {
+        let id = 'CER2018-0';
+        for(let i = 0; i < 3; i++){
+          id += (parseInt(Math.random() * 9, 10) + 1);
+        }
+        return id;
+      },
+      loadMore(event, done) {
+        const self = this;
+
+        setTimeout(() => {
+          let dummyData = {
+            cid: 'CER2018-0001',
+            state: 'Initial Checking',
+            totalAmount: '$7,500,000',
+            unbudgete: null,
+            applicant: 'JONATHAN JOSDA',
+            revenveMode: 'Acquisiton'
+          };
+          dummyData.cid = self.randomId();
+          self.cardArray.splice(0, 0, dummyData);
+          done();
+        }, 1000);
       }
     }
   }

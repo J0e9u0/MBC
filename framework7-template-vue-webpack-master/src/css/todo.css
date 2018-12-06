@@ -14,7 +14,7 @@
     /*display: -webkit-inline-flex;*/
 /*}*/
 
-#todoTab .block {
+#tab-todo .block {
   margin-top: 0px;
   padding: 0px;
 }
@@ -24,7 +24,7 @@
 }
 
 #main-view .navbar{
-    background: #118FFD;
+  background: linear-gradient(to bottom, #067bff, #59aaf7);
 }
 
 .left-color-belt{
@@ -67,10 +67,10 @@
     color: cornflowerblue;
 }
 
-.img-arror-right{
+.img-arrow-right{
     background-size: 8px 13px;
     background-repeat: no-repeat;
-    background-position: 95% center;
+    background-position: 98% center;
     background-image: url(../img/right-arror.svg);
 }
 

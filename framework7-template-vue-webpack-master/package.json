@@ -5,6 +5,7 @@
   "scripts": {
     "build-dev": "node ./build/dev.js",
     "build-prod": "node ./build/prod.js",
+    "watch": "webpack --watch",
     "dev": "webpack-dev-server --config ./build/webpack.config.dev.js",
     "prod": "webpack-dev-server --config ./build/webpack.config.prod.js",
     "start": "npm run dev",
