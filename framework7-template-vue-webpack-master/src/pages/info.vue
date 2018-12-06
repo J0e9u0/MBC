@@ -9,44 +9,34 @@
 
     <f7-block>
       <!-- Basic Info -->
-      <f7-card card-outline>
-        <f7-card-header>
-          <div class="info-panel-title">
-            Basic Info
-          </div>
-        </f7-card-header>
+      <infoCard
+        title="Basic Info"
+      >
         <f7-card-content class="card-content-padding">
-            <f7-row width="100" class="text-label">
-              <f7-col width="100">
-                <div class="text-key">Applicant</div>
-                <div class="text-value">{{infoArray[0].basicInfo.applicant}}</div>
-              </f7-col>
-              <f7-col width="100" class="gap-top">
-                <div class="text-key">Asset Type</div>
-                <div class="text-value">{{infoArray[0].basicInfo.assetType}}</div>
-              </f7-col>
-              <f7-col width="100" class="gap-top">
-                <div class="text-key">Company Name</div>
-                <div class="text-value">{{infoArray[0].basicInfo.companyName}}</div>
-              </f7-col>
-              <f7-col width="100" class="gap-top">
-                <div class="text-key">Description</div>
-                <div class="text-value">{{infoArray[0].basicInfo.description}}</div>
-              </f7-col>
-            </f7-row>
+          <f7-row width="100" class="text-label">
+            <f7-col width="100">
+              <div class="text-key">Applicant</div>
+              <div class="text-value">{{infoArray[0].basicInfo.applicant}}</div>
+            </f7-col>
+            <f7-col width="100" class="gap-top">
+              <div class="text-key">Asset Type</div>
+              <div class="text-value">{{infoArray[0].basicInfo.assetType}}</div>
+            </f7-col>
+            <f7-col width="100" class="gap-top">
+              <div class="text-key">Company Name</div>
+              <div class="text-value">{{infoArray[0].basicInfo.companyName}}</div>
+            </f7-col>
+            <f7-col width="100" class="gap-top">
+              <div class="text-key">Description</div>
+              <div class="text-value">{{infoArray[0].basicInfo.description}}</div>
+            </f7-col>
+          </f7-row>
         </f7-card-content>
-        <f7-card-footer class="info-bottom-label">
-          <label class="more-text">More</label>
-          <i class="icon f7-icons color-gray ios-only chevron-right-img">chevron_right</i>
-        </f7-card-footer>
-      </f7-card>
+      </infoCard>
       <!-- Have Budgeted -->
-      <f7-card card-outline>
-        <f7-card-header>
-          <div class="info-panel-title">
-            Have Budgeted
-          </div>
-        </f7-card-header>
+      <infoCard
+        title="Have Budgeted"
+      >
         <f7-card-content class="card-content-padding">
           <f7-row width="100" class="info-value-label">
             <div class="text-key">Total Lease Commitment</div>
@@ -66,18 +56,11 @@
             <div class="text-value">{{infoArray[0].haveBudgeted.budgetVariance}}</div>
           </f7-row>
         </f7-card-content>
-        <f7-card-footer class="info-bottom-label">
-          <label class="more-text">More</label>
-          <i class="icon f7-icons color-gray ios-only chevron-right-img">chevron_right</i>
-        </f7-card-footer>
-      </f7-card>
+      </infoCard>
       <!-- Supporting Document -->
-      <f7-card card-outline>
-        <f7-card-header>
-          <div class="info-panel-title">
-            Supporting Document
-          </div>
-        </f7-card-header>
+      <infoCard
+        title="Supporting Document"
+      >
         <f7-card-content class="file-content-padding" v-for="(value, key, index) in infoArray[0].supportingDocument">
           <f7-row width="100" class="info-file-label" v-bind:class="{ topLine: index != 0 }">
             <f7-col width="80" class="file-block">
@@ -92,17 +75,13 @@
             </div>
           </f7-row>
         </f7-card-content>
-        <f7-card-footer class="info-bottom-label">
-          <label class="more-text">More</label>
-          <i class="icon f7-icons color-gray ios-only chevron-right-img">chevron_right</i>
-        </f7-card-footer>
-      </f7-card>
-
+      </infoCard>
     </f7-block>
   </f7-page>
 </template>
 
 <script>
+  import infoCard from './info-card.vue';
   require('../css/info.css');
   export default {
     data() {
@@ -132,6 +111,9 @@
           }]
         }]
       }
+    },
+    components: {
+      infoCard
     }
   }
 </script>
