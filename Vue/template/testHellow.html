@@ -6,15 +6,23 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 </head>
 <body>
-<template>
-    <div>This will be pre-compiled</div>
-</template>
+
+    <div id="app">
+
+    </div>
+
 <script src=""></script>
-<style src=""></style></div>
+<style src=""></style>
 
 
 </body>
 <script>
-
+    import Hello from 'Hello.vue';
+    new Vue({
+        el: '#app',
+        components: {
+            'Hello': Hello
+        }
+    })
 </script>
 </html>
