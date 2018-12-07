@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最基本的 Vuex 记数应用</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@2.0.0"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ count }}</p>
+    <p>
+        <button @click="increment">+</button>
+        <button @click="decrement">-</button>
+        <button @click="reset">reset</button>
+        <button @click="setTen">setTen</button>
+    </p>
+</div>
+
+
+</body>
+<script>
+    // make sure to call Vue.use(Vuex) if using a module system
+    const store = new Vuex.Store({
+        state: {
+            count: 0
+        },
+        mutations: {
+            increment: state => state.count++,
+            decrement: state => state.count--,
+            reset (state, number) {
+                state.count = number;
+            },
+            setTen: (state, number) => state.count = number
+        }
+    });
+
+    new Vue({
+        el: '#app',
+        computed: {
+            count () {
+                return store.state.count
+            }
+        },
+        methods: {
+            increment () {
+                store.commit('increment')
+            },
+            decrement () {
+                store.commit('decrement')
+            },
+            reset (){
+                store.commit('reset', '0')
+            },
+            setTen (){
+                store.commit('reset', '10')
+            }
+        }
+    })
+</script>
+</html>
