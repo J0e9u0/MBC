@@ -16,15 +16,15 @@ import AppStyles from './css/app.css';
 
 // Import App Component
 import App from './app.vue';
-
+import store from './store/store.js'
 // Init F7 Vue Plugin
 Framework7.use(Framework7Vue)
 
 // Init App
 new Vue({
   el: '#app',
+  store,
   template: '<app/>',
-
   // Register App Component
   components: {
     app: App

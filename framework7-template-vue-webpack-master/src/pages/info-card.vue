@@ -8,7 +8,7 @@
     <!-- f7-card-content -->
     <slot></slot>
     <f7-card-footer class="info-bottom-label">
-      <label class="more-text">More</label>
+      <label class="more-text" v-on:click="$emit('getMoreInfo')">More</label>
       <i class="icon f7-icons color-gray ios-only chevron-right-img">chevron_right</i>
     </f7-card-footer>
   </f7-card>

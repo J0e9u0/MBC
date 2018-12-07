@@ -123,11 +123,11 @@
         // `this` 在方法里指向当前 Vue 实例
         // `event` 是原生 DOM 事件
         console.log(data.cid);
-        this.$f7router.navigate('/info/' + data.cid, {
-          props: {
-            cid: data.cid
-          }
-        });
+        console.log(this.$store)
+
+        this.$store.commit('setCid', data.cid);
+
+        this.$f7router.navigate('/info/' + data.cid);
       },
       randomId() {
         let id = 'CER2018-0';
