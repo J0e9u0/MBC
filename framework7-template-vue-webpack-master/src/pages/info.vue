@@ -12,19 +12,19 @@
       <detailCard
         title="Basic Info"
         cardType="vertical"
-        :dataArray=basicInfo
+        :dataArray=infoCard.basicInfo
       ></detailCard>
       <!-- Have Budgeted -->
       <detailCard
         title="Have Budgeted"
         cardType="horizontal"
-        :dataArray=budgeted
+        :dataArray=infoCard.budgeted
       ></detailCard>
       <!-- Supporting Document -->
       <detailCard
         title="Supporting Document"
         cardType="file"
-        :dataArray=fileArray
+        :dataArray=infoCard.fileArray
       ></detailCard>
     </f7-block>
   </f7-page>
@@ -36,29 +36,7 @@
   export default {
     data() {
       return {
-        basicInfo: {
-          'Applicant': 'GLADYS CHIU',
-          'Asset Type': 'OLL warehouses, depots, trucks & others',
-          'Company Name': 'Gold Talent Business Consulting (Shanghai)...',
-          'Description': 'Subject: ${FORM_TYPE} Form Number...'
-        },
-        budgeted: {
-          'Total Lease Commitment': null,
-          'Previous Application(s)': null,
-          'This Application': '$123,456,789',
-          'Budget Variance': null
-        },
-        fileArray: {
-          supportingDocument: [{
-            fileId: '1',
-            fileName: 'A4_CER1100.DOC',
-            fileDescription: 'A4 CER1100'
-          }, {
-            fileId: '2',
-            fileName: 'A4_CER1101.DOC',
-            fileDescription: 'A4 OLD1101'
-          }]
-        }
+
       }
     },
     components: {
@@ -66,10 +44,12 @@
     },
     computed: {
       cid() {
+        console.log(this.$store.state.cid);
         return this.$store.state.cid;
       },
-      todoCard(){
-        return this.$store.state.card;
+      infoCard(){
+        console.log(this.$store.state.infoCard);
+        return this.$store.state.infoCard;
       }
     }
   }

@@ -84,6 +84,31 @@
 
 <script>
   require('../css/todo.css');
+  const infoCard = {
+    basicInfo: {
+      'Applicant': 'GLADYS CHIU',
+      'Asset Type': 'OLL warehouses, depots, trucks & others',
+      'Company Name': 'Gold Talent Business Consulting (Shanghai)...',
+      'Description': 'Subject: ${FORM_TYPE} Form Number...'
+    },
+    budgeted: {
+      'Total Lease Commitment': null,
+      'Previous Application(s)': null,
+      'This Application': '$123,456,789',
+      'Budget Variance': null
+    },
+    fileArray: {
+      supportingDocument: [{
+        fileId: '1',
+        fileName: 'A4_CER1100.DOC',
+        fileDescription: 'A4 CER1100'
+      }, {
+        fileId: '2',
+        fileName: 'A4_CER1101.DOC',
+        fileDescription: 'A4 OLD1101'
+      }]
+    }
+  };
   export default {
     data() {
       return {
@@ -123,9 +148,14 @@
         // `this` 在方法里指向当前 Vue 实例
         // `event` 是原生 DOM 事件
         console.log(data.cid);
-        console.log(this.$store)
-
+        console.log(this.$store);
         this.$store.commit('setCid', data.cid);
+        // this.$store.commit('infoCard', infoCard);
+        // this.$store.dispatch('infoCard', data.infoCard);
+        this.$store.state.infoCard = infoCard;
+        // console.log('commit:');
+        // console.log(this.$store.state.cid);
+        // console.log(this.$store.state.infoCard);
 
         this.$f7router.navigate('/info/' + data.cid);
       },

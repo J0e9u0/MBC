@@ -7,7 +7,9 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
     cid: 'testc',
-    card:{}
+    infoCard:{
+
+    }
   },
   getters:{
     getCid(state){
@@ -17,6 +19,9 @@ const store = new Vuex.Store({
   mutations: {
     setCid(state, cid){
       state.cid = cid;
+    },
+    setInfoCard(state, infoCard){
+      state.infoCard = infoCard;
     }
   }
 });
