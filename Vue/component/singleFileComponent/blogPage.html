@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单个根元素</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+<div id="blog-post-demo">
+    <blogPost
+            v-for="post in posts"
+            v-bind:key="post.id"
+            v-bind:post="post"
+    ></blogPost>
+</div>
+</body>
+<script>
+    import blogPost from './blog-post".vue';
+    new Vue({
+        el: '#blog-post-demo',
+        data: {
+            posts: [
+                { id: 1, title: 'My journey with Vue', content: '<span>content</span>' },
+                { id: 2, title: 'Blogging with Vue' },
+                { id: 3, title: 'Why Vue is so fun' }
+            ]
+        },
+        components: {
+            blogPost:blogPost
+        }
+    });
+</script>
+</html>
