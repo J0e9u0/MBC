@@ -150,9 +150,9 @@
         console.log(data.cid);
         console.log(this.$store);
         this.$store.commit('setCid', data.cid);
-        // this.$store.commit('infoCard', infoCard);
-        // this.$store.dispatch('infoCard', data.infoCard);
-        this.$store.state.infoCard = infoCard;
+        this.$store.commit('setInfoCard', infoCard);
+        // this.$store.dispatch('setInfoCard', data.infoCard);
+        // this.$store.state.infoCard = infoCard;
         // console.log('commit:');
         // console.log(this.$store.state.cid);
         // console.log(this.$store.state.infoCard);
