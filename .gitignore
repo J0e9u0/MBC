@@ -42,3 +42,5 @@ framework7-template-vue-webpack-master/dist/
 framework7-template-vue-webpack-master/npm-debug.log
 framework7-template-vue-webpack-master/www/
 framework7-template-vue-webpack-master/src/fonts
+
+.idea/workspace.xml
